@@ -16,10 +16,10 @@ function Timer() {
     useEffect(() => {
       if(active){
         timer = setInterval(() => {
-          if(sec <= input && sec > 60 ){
+          if(sec <= input  && sec > 60 && sec > 0){
             setSec((input) => input -1)
           }
-          if(min <= input && min <= 60){
+          if(min <= input && sec > 0){
             setMin((input) => input - 1);
             setSec((input => input - 1))
             
